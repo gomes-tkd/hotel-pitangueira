@@ -1,0 +1,45 @@
+.login {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 50vh;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.forms {
+    max-width: 30rem;
+    padding: 1rem;
+    grid-column: 2;
+}
+
+.cadastro {
+    grid-column: 2;
+    max-width: 30rem;
+    padding: 1rem;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.cadastro::before {
+    content: "";
+    height: 1px;
+    width: 90%;
+    color: #333;
+    background: currentColor;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.paragrafo {
+    font-size: 1.125rem;
+    color: #333;
+    margin-bottom: 15px;
+    grid-column: 2;
+}
+
+.title {
+    font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.875rem;
+    font-weight: bold;
+    top: 15px;
+}

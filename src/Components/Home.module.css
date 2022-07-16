@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Comfortaa:wght@600&display=swap');
+
+.homeContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #fff;
+    align-items: center;
+    height: 16rem;
+    padding: 15px 30px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.sobre {
+    padding: 15px;
+    background-color: #ddd;
+    font-size: 1.5rem;
+    border-radius: 4px;
+}
+
+.aButton {
+    display: inline-block;
+    background-color: #fff;
+    padding: 16px 32px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.title {
+    font-family: 'Comfortaa', cursive;
+}
+
+.subtitle {
+    font-size: 1.875rem;
+}
+
+.servicos {
+    display: flex;
+}
