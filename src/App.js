@@ -7,25 +7,28 @@ import Home from "./Components/Home";
 import Servicos from "./Components/NavMenu/Servicos";
 import Informacoes from "./Components/NavMenu/Informacoes";
 import Contato from "./Components/NavMenu/Contato";
-import Login from "./Components/Login/Login";
 import Quarto from "./Components/Quartos/Quarto";
+import Login from "./Components/Login/Login";
+import { UserStorage } from "./UserContext";
 
 const App = () => {
 
   return (
       <div className={"container"}>
           <BrowserRouter>
-              <Header />
-              <Routes>
-                  <Route path={"/"} element={<Home />} />
-                  <Route path={"informacoes"} element={<Informacoes />} />
-                  <Route path={"servicos"} element={<Servicos />} />
-                  <Route path={"contato"} element={<Contato />} />
-                  <Route path={"login"} element={<Login />} />
-                  <Route path={"quartos"} element={<Quarto />} />
-                  <Route path={"*"} element={<PaginaAindaNaoCriada />} />
-              </Routes>
-              <Footer />
+              <UserStorage>
+                  <Header />
+                  <Routes>
+                      <Route path={"/"} element={<Home />} />
+                      <Route path={"informacoes"} element={<Informacoes />} />
+                      <Route path={"servicos"} element={<Servicos />} />
+                      <Route path={"contato"} element={<Contato />} />
+                      <Route path={"login/*"} element={<Login />} />
+                      <Route path={"quartos"} element={<Quarto />} />
+                      <Route path={"*"} element={<PaginaAindaNaoCriada />} />
+                  </Routes>
+                  <Footer />
+              </UserStorage>
           </BrowserRouter>
       </div>
   );

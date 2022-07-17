@@ -1,11 +1,11 @@
 .wrapper {
-    margin-bottom: 1rem;
+    margin: 1.5rem 0;
 }
 
 .input {
     border: 1px solid #eee;
     display: block;
-    width: 80%;
+    width: 95%;
     font-size: 1rem;
     padding: 0.8rem;
     border-radius: 0.4rem;
@@ -26,4 +26,10 @@
     font-size: 1rem;
     line-height: 1;
     padding-bottom: 0.5rem;
+}
+
+.error {
+    color: #f31;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
 }

@@ -6,6 +6,13 @@
     border-radius: 5px;
 }
 
+.login::before {
+    content: "";
+    background: url("../../Assets/login.jpg") no-repeat center center;
+    background-size: cover;
+    border-radius: 5px 0 0 5px;
+}
+
 .forms {
     max-width: 30rem;
     padding: 1rem;
@@ -33,8 +40,9 @@
 .paragrafo {
     font-size: 1.125rem;
     color: #333;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
     grid-column: 2;
+
 }
 
 .title {
