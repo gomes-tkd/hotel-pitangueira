@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import React from 'react';
 import styles from "./Home.module.css";
 
@@ -14,7 +14,7 @@ const Home = () => {
                     <p>
                         Nosso hotel conta com três tipos de acomodações prontas para te receber junto com sua família.
                     </p>
-                    <Link className={styles.aButton} to={"quartos"}>Quartos</Link>
+                    <NavLink className={styles.aButton} to={"quarto/cadastrados"}>Quartos</NavLink>
                 </div>
             </section>
         </main>

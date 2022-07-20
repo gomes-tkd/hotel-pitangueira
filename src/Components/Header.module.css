@@ -17,6 +17,10 @@
     border-radius: 4px;
 }
 
+.nav a {
+    color: #764701;
+}
+
 .informacoes {
     display: flex;
     align-items: center;

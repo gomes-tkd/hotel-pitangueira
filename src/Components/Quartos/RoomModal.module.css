@@ -1,0 +1,47 @@
+.modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    z-index: 1000;
+    padding: 2rem calc(4rem + 15px) 2rem 4rem;
+}
+
+.foto {
+    margin: 0 auto;
+    height: 36rem;
+    border-radius: 5px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 36rem 20rem;
+    grid-template-rows: auto 1fr auto;
+    gap: 1rem;
+}
+
+.detalhes {
+    padding: 2rem 2rem 0 2rem;
+}
+
+.img {
+    grid-row: 1 / 4;
+}
+
+.quartoNome {
+    margin: 15px 0;
+}
+
+.quartoNome a {
+    color: #764701;
+
+}
+
+.atributos {
+    padding: 5px;
+}
+
+.atributos li {
+    margin-top: 10px;
+}

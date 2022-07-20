@@ -1,7 +1,11 @@
 
+* {
+    color: #764701;
+}
+
 body {
     margin: 0;
-    color: #333;
+    color: #764701;
     background: #eee;
     --type-first: Roboto, Arial, sans-serif;
     --type-second: 'Spectral', Georgia;
@@ -14,6 +18,8 @@ h3,
 h4,
 p {
     margin: 0;
+    color: #764701;
+
 }
 
 ul,

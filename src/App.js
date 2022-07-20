@@ -7,9 +7,10 @@ import Home from "./Components/Home";
 import Servicos from "./Components/NavMenu/Servicos";
 import Informacoes from "./Components/NavMenu/Informacoes";
 import Contato from "./Components/NavMenu/Contato";
-import Quarto from "./Components/Quartos/Quarto";
+import Room from "./Components/Quartos/Room";
 import Login from "./Components/Login/Login";
 import { UserStorage } from "./UserContext";
+import User from "./Components/Usuarios/User";
 
 const App = () => {
 
@@ -24,7 +25,8 @@ const App = () => {
                       <Route path={"servicos"} element={<Servicos />} />
                       <Route path={"contato"} element={<Contato />} />
                       <Route path={"login/*"} element={<Login />} />
-                      <Route path={"quartos"} element={<Quarto />} />
+                      <Route path={"quarto/*"} element={<Room />} />
+                      <Route path={"conta/*"} element={<User />} />
                       <Route path={"*"} element={<PaginaAindaNaoCriada />} />
                   </Routes>
                   <Footer />

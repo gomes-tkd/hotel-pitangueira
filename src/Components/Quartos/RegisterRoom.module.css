@@ -1,0 +1,30 @@
+.roomAdd {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+    max-width: 50rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    background-color: #fff;
+}
+
+.file {
+    margin-bottom: 1rem;
+}
+
+.form {
+    background-color: #fff;
+}
+
+.preview {
+    border-radius: 1rem;
+    background-size: cover;
+    background-position: center center;
+}
+
+.preview::after {
+    content: "";
+    display: block;
+    height: 0;
+    padding-bottom: 100%;
+}

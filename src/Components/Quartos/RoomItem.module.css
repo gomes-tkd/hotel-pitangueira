@@ -1,0 +1,14 @@
+.teste {
+    background: #eee;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.teste img {
+    border-radius: 5px 5px 0 0;
+}
+
+.teste p{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}

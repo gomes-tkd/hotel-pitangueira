@@ -1,0 +1,19 @@
+.registredRoom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #fff;
+    gap: 2rem;
+    max-width: 50rem;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.btnDisabled {
+    background-color: #fff;
+}
