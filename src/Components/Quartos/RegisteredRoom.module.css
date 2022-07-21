@@ -17,3 +17,10 @@
 .btnDisabled {
     background-color: #fff;
 }
+
+.qwe {
+    background-color: #fff;
+    padding: 15px;
+    max-width: 50rem;
+    border-radius: 5px;
+}

@@ -1,3 +1,7 @@
+h2 {
+    margin-top: 15px;
+}
+
 .modal {
     position: fixed;
     width: 100vw;
@@ -44,4 +48,12 @@
 
 .atributos li {
     margin-top: 10px;
+}
+
+.servicos {
+    padding: 15px;
+}
+
+.servicos p {
+    margin-top: 8px;
 }

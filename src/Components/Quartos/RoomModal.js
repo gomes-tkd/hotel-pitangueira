@@ -45,10 +45,12 @@ const RoomModal = ({ photo, setPhoto }) => {
                                 <li>Visualizações: {photo.acessos}</li>
                             </ul>
                             <h2>Serviços ofertados</h2>
-                            <p>Lavanderia</p>
-                            <p>Telefone</p>
-                            <p>Frigobar</p>
-                            <p>Restaurante</p>
+                            <div className={styles.servicos}>
+                                <p>Lavanderia</p>
+                                <p>Telefone</p>
+                                <p>Frigobar</p>
+                                <p>Restaurante</p>
+                            </div>
                         </div>
                     </div>
                 </div>
