@@ -14,6 +14,7 @@ const Header = () => {
                     <NavLink to={"informacoes"} className={styles.info}>Informações</NavLink>
                     <NavLink to={"servicos"} className={styles.info}>Serviços</NavLink>
                     <NavLink to={"contato"} className={styles.info}>Contato</NavLink>
+                    <NavLink to={"/quarto/cadastrados"} className={styles.info}>Quartos</NavLink>
                     {data ? (
                         <NavLink to={"conta"} className={styles.info}>
                             {data.nome}

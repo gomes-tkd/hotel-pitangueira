@@ -23,6 +23,8 @@ const RoomModal = ({ photo, setPhoto }) => {
         }
     }
 
+    console.log({photo})
+
     return (
         <div onClick={handleOutSideClick}>
             {data && (
@@ -41,6 +43,7 @@ const RoomModal = ({ photo, setPhoto }) => {
                             <h2>Detalhes</h2>
                             <ul className={styles.atributos}>
                                 <li>Categoria: {photo.categoria}</li>
+                                <li>Descrição: {photo.CONTENT}</li>
                                 <li>Valor: {photo.valor}</li>
                                 <li>Visualizações: {photo.acessos}</li>
                             </ul>

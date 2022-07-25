@@ -21,10 +21,11 @@ const UseFetch = () => {
             }
 
         } catch (e) {
-            setError("Dados incompletos seu imundícia... vai dormir ohhhh seu JAGUARA...");
+            setError("Dados incompletos.");
         } finally {
             setData(json);
             setLoading(false);
+
             return {
                 response,
                 json,

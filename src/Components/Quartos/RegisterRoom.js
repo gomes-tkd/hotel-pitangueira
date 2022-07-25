@@ -57,6 +57,7 @@ const RegisterRoom = () => {
                     ></div>
                 )}
             </div>
+            {data && <p>Quarto cadastrado com sucesso!!!</p> }
         </section>
     );
 };
