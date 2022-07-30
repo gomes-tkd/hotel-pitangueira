@@ -1,57 +1,58 @@
-import React, { useEffect, useState } from 'react';
-import useFetch from "../../Hooks/useFetch";
-import { PHOTOS_GET } from "../../Api";
-import RoomItem from "./RoomItem";
+import React, {useContext, useEffect, useState} from 'react';
 import styles from "./RegisteredRoom.module.css";
-import RoomModal from "./RoomModal";
 import Input from "../Form/Input";
+import { getRooms } from "../../Firebase";
+import RoomDelete from "./RoomDelete";
+import {Link} from "react-router-dom";
+import { UserContext } from "../../UserContext";
 
 const RegisteredRoom = () => {
 
-    const { data, request } = useFetch();
+    const { data } = useContext(UserContext);
+
     const [page, setPage] = useState(1);
     const [photo, setPhoto] = useState(false);
     const [busca, setBusca] = useState("");
 
-    useEffect (  () => {
-        async function fetchPhoto() {
-            const { url, options } = PHOTOS_GET({page, total: 9, user: 0});
-            const { response, json } = await request(url, options);
-        }
+    const [rooms, setRooms] = useState([]);
 
-        fetchPhoto();
-
-    }, [request, page]);
+    useEffect(() => {
+        getRooms(setRooms);
+    }, []);
 
     function handleBusca({ target }) {
         setBusca(target.value);
     }
 
-    if (data) {
-        return (
-            <section className={styles.qwe}>
-                { photo && <RoomModal photo={ photo } setPhoto={setPhoto} /> }
-                <Input
-                    label={"Por qual tipo de quarto desejas buscar?"}
-                    name={"busca"}
-                    value={busca}
-                    onChange={handleBusca}
-                />
-                <ul className={styles.registredRoom}>
-                    { data
-                        .filter(quarto =>(
-                            quarto.categoria
-                                .toLowerCase()
-                                .includes(busca.toLowerCase()))
-                        )
-                        .map(photo => (
-                            <RoomItem
-                                photo={ photo }
-                                key={ photo.id }
-                                setPhoto={setPhoto}
-                            />
-                        ))}
-                </ul>
+    return (
+        <section className={styles.qwe}>
+            <Input
+                label={"Por qual tipo de quarto desejas buscar?"}
+                name={"busca"}
+                value={busca}
+                onChange={handleBusca}
+            />
+            <ul>
+                <h1>Firebase</h1>
+                {rooms
+                    .filter(quarto => (
+                        quarto.category
+                            .toLowerCase()
+                            .includes(busca.toLowerCase())
+                    ))
+                    .map(room => {
+                        return (
+                            <div key={room.id} className={styles.registredRoom}>
+                                <li>{room.title}</li>
+                                <li>{room.category}</li>
+                                <li>{room.description}</li>
+                                <li>{room.price}</li>
+                                {data && <RoomDelete id={room.id}/>}
+                                {data && <Link to={`/quarto/${room.id}/editar`}>Editar</Link>}
+                            </div>
+                        )})
+                }
+            </ul>
                 <div className={styles.btns}>
                     {page > 1 ? (
                         <button onClick={() => setPage(page - 1)}> Anterior </button>
@@ -61,11 +62,8 @@ const RegisteredRoom = () => {
                     <p>{ page }</p>
                     <button onClick={() => setPage(page + 1)}> Próximo </button>
                 </div>
-            </section>
-        );
-    } else {
-        return null;
-    }
+        </section>
+    );
 };
 
 export default RegisteredRoom;

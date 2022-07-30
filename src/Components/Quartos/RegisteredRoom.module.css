@@ -1,7 +1,7 @@
 .registredRoom {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    background-color: #fff;
+    background-color: gray;
     gap: 2rem;
     max-width: 50rem;
     border-radius: 5px;

@@ -13,7 +13,6 @@ import { UserStorage } from "./UserContext";
 import User from "./Components/Usuarios/User";
 
 const App = () => {
-
   return (
       <div className={"container"}>
           <BrowserRouter>
