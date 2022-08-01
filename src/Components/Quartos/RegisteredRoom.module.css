@@ -1,11 +1,12 @@
-.registredRoom {
+.registeredRoom {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, auto);
     background-color: gray;
     gap: 2rem;
     max-width: 50rem;
     border-radius: 5px;
     padding: 15px;
+    margin-top: 20px;
 }
 
 .btns {
